@@ -13,7 +13,7 @@
   </tr>
 <tr>
 <td align=center>
-<img src="images/tomcat.gif">
+<img src="images/tomcat.gif"  alt="rooms of the house.">
 </td>
 <td>
 <h1>Sample ApplicationEST JSP Page</h1>
