@@ -4,7 +4,7 @@
 <head>
 <title>Sample Application JSP Page</title>
 </head>
-<body bgcolor=white>
+<body>
 
 <table border="0">
 <caption>New York City Marathon Results 2013</caption>
