@@ -13,7 +13,7 @@
     <th scope="col">Age</th>
   </tr>
 <tr>
-<td align=center>
+<td>
 <img src="images/tomcat.gif"  alt="rooms of the house.">
 </td>
 <td>
