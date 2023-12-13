@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
 <title>Sample Application JSP Page</title>
 </head>
