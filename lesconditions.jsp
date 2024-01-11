@@ -55,7 +55,7 @@
         <%-- Exercice 2: Pair ou Impair --%>
         <h2>Exercice 2 : Pair ou Impair ?</h2>
         <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
-        <% int nombre = 7; %>
+        <% int nombre = intValeur1; %>
         <% if (nombre % 2 == 0) { %>
             Le nombre <%= nombre %> est pair.
         <% } else { %>
