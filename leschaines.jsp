@@ -1,13 +1,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
 <head>
-<title>Les chaines</title>
+    <title>Les chaines</title>
 </head>
 <body bgcolor=white>
-<h1>Exercices sur les chaines de charactères</h1>
+<h1>Exercices sur les chaines de caractères</h1>
 <form action="#" method="post">
-    <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" id="inputValeur" name="chaine">
-    <p><input type="submit" value="Afficher">
+    <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" id="inputValeur" name="chaine"></p>
+    <p><input type="submit" value="Afficher"></p>
 </form>
 <%-- Récupération des valeurs --%>
     <% String chaine = request.getParameter("chaine"); %>
@@ -32,8 +32,8 @@
     <p>Votre premier "e" est en : <%= position %></p>
 
     
-<h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
-<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
+<h2>Exercice 1 : Combien de 'e' dans notre chaine de caractère ?</h2>
+<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères</p>
 <p>
     Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères.
     <% int countE = 0;
