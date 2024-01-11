@@ -34,6 +34,18 @@
     
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
+<p>
+    Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères.
+    <% int countE = 0;
+       for (int i = 0; i < chaine.length(); i++) {
+           if (Character.toLowerCase(chaine.charAt(i)) == 'e') {
+               countE++;
+           }
+       }
+    %>
+    Le nombre de 'e' dans la chaîne "<%= chaine %>" est : <%= countE %>
+</p>
+
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
@@ -65,24 +77,6 @@ xueivulp ares revih'l</p>
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
-<%
-int countConsonnes = 0;
-int countVoyelles = 0;
-String voyelles = "aeiouAEIOU";
-
-for (int i = 0; i < chaine.length(); i++) {
-    char currentChar = chaine.charAt(i);
-    if (Character.isLetter(currentChar)) {
-        if (voyelles.indexOf(currentChar) != -1) {
-            countVoyelles++;
-        } else {
-            countConsonnes++;
-        }
-    }
-}
-%>
-Nombre de consonnes : <%= countConsonnes %><br>
-Nombre de voyelles : <%= countVoyelles %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
