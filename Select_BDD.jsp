@@ -96,7 +96,7 @@ if (titreParam != null && anneeParam != null && !titreParam.isEmpty() && !anneeP
 
         // Établir la connexion
         // Exemple de requête SQL pour l'ajout du nouveau film
-        String sql = "INSERT INTO Film (titre, année) VALUES (?, ?)";
+        sql = "INSERT INTO Film (titre, année) VALUES (?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, titreParam);
             pstmt.setInt(2, Integer.parseInt(anneeParam));
