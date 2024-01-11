@@ -90,12 +90,9 @@ String titreParam = request.getParameter("titre");
 
 if (titreParam != null && anneeParam != null && !titreParam.isEmpty() && !anneeParam.isEmpty()) {
     try {
-        String url = "jdbc:mariadb://localhost:3306/films";
-        String user = "mysql";
-        String password = "mysql";
-
-        // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
-        Class.forName("org.mariadb.jdbc.Driver");
+         url = "jdbc:mariadb://localhost:3306/films";
+         user = "mysql";
+         password = "mysql";
 
         // Établir la connexion
         Connection conn = DriverManager.getConnection(url, user, password);
