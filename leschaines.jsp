@@ -68,7 +68,7 @@ xueivulp ares revih'l</p>
 <%
 int countConsonnes = 0;
 int countVoyelles = 0;
-String voyelles = "aeiouyAEIOUY";
+String voyelles = "aeiouAEIOU";
 
 for (int i = 0; i < chaine.length(); i++) {
     char currentChar = chaine.charAt(i);
@@ -81,6 +81,8 @@ for (int i = 0; i < chaine.length(); i++) {
     }
 }
 %>
+Nombre de consonnes : <%= countConsonnes %><br>
+Nombre de voyelles : <%= countVoyelles %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
