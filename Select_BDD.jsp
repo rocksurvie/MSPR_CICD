@@ -7,80 +7,98 @@
     <title>Connexion à MariaDB via JSP</title>
 </head>
 <body>
+    <form action="#" method="post">
+    <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" name="chaine">
+    <p><input type="submit" value="Afficher">
+</form>
+<%-- Récupération de la valeur saisie --%>
+<% String chaine = request.getParameter("chaine"); %>
+
     <h1>Exemple de connexion à MariaDB avec JSP</h1>
-    <% 
-    String url = "jdbc:mariadb://localhost:3306/films";
-    String user = "mysql";
-    String password = "mysql";
 
-    // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
-    Class.forName("org.mariadb.jdbc.Driver");
-
-        // Établir la connexion
-        Connection conn = DriverManager.getConnection(url, user, password);
-        // Exemple de requête SQL
-        String sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000";
-        PreparedStatement pstmt = conn.prepareStatement(sql);
-        ResultSet rs = pstmt.executeQuery();
-
-        // Afficher les résultats (à adapter selon vos besoins)
-        while (rs.next()) {
-            String colonne1 = rs.getString("idFilm");
-            String colonne2 = rs.getString("titre");
-            String colonne3 = rs.getString("année");
-            // Faites ce que vous voulez avec les données...
-            //Exemple d'affichage de 2 colonnes
-            out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
-        }
-
-        // Fermer les ressources 
-        rs.close();
-        pstmt.close();
-        conn.close();
-    %>
 
 <h2>Exercice 1 : Les films entre 2000 et 2015</h2>
 <p>Extraire les films dont l'année est supérieur à l'année 2000 et inférieur à 2015.</p>
 <% 
- url = "jdbc:mariadb://localhost:3306/films";
- user = "mysql";
- password = "mysql";
+String url = "jdbc:mariadb://localhost:3306/films";
+String user = "mysql";
+String password = "mysql";
 
 // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
 Class.forName("org.mariadb.jdbc.Driver");
 
-    // Établir la connexion
-    Connection conn = DriverManager.getConnection(url, user, password);
-    // Exemple de requête SQL
-     sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000";
-    PreparedStatement pstmt = conn.prepareStatement(sql);
-    ResultSet rs = pstmt.executeQuery();
+// Établir la connexion
+Connection conn = DriverManager.getConnection(url, user, password);
 
-    // Afficher les résultats (à adapter selon vos besoins)
-    while (rs.next()) {
-        if (rs.getInt("année") >= 2000 && rs.getInt("année") <= 2015) {
+// Exemple de requête SQL
+String sql = "SELECT idFilm, titre, année FROM Film WHERE année >= 2000 AND année <= 2015";
+PreparedStatement pstmt = conn.prepareStatement(sql);
+ResultSet rs = pstmt.executeQuery();
 
-             colonne1 = rs.getString("idFilm");
-             colonne2 = rs.getString("titre");
-             colonne3 = rs.getString("année");
-            out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "</br>");
-    
-        }
-    }
+// Afficher les résultats (à adapter selon vos besoins)
+while (rs.next()) {
+    String colonne1 = rs.getString("idFilm");
+    String colonne2 = rs.getString("titre");
+    String colonne3 = rs.getString("année");
+    out.println("id : " + colonne1 + ", titre : " + colonne2 + ", année : " + colonne3 + "<br>");
+}
 
-    // Fermer les ressources 
-    rs.close();
-    pstmt.close();
-    conn.close();
+// Fermer les ressources 
+rs.close();
+pstmt.close();
+conn.close();
 %>
+
 <h2>Exercice 2 : Année de recherche</h2>
 <p>Créer un champ de saisie permettant à l'utilisateur de choisir l'année de sa recherche.</p>
+<form action="#" method="post">
+    <p>Saisir une année : <input type="text" name="annee"></p>
+    <p><input type="submit" value="Rechercher"></p>
+</form>
+
+<%
+String anneeParam = request.getParameter("annee");
+
+if (anneeParam != null && !anneeParam.isEmpty()) {
+    int anneeRecherche = Integer.parseInt(anneeParam);
+    // Réalisez ici la recherche avec l'année
+}
+%>
 
 <h2>Exercice 3 : Modification du titre du film</h2>
 <p>Créer un fichier permettant de modifier le titre d'un film sur la base de son ID (ID choisi par l'utilisateur)</p>
+<form action="#" method="post">
+    <p>ID du film : <input type="text" name="idFilm"></p>
+    <p>Nouveau titre : <input type="text" name="nouveauTitre"></p>
+    <p><input type="submit" value="Modifier"></p>
+</form>
+
+<%
+String idFilmParam = request.getParameter("idFilm");
+String nouveauTitreParam = request.getParameter("nouveauTitre");
+
+if (idFilmParam != null && nouveauTitreParam != null && !idFilmParam.isEmpty() && !nouveauTitreParam.isEmpty()) {
+    int idFilm = Integer.parseInt(idFilmParam);
+    // Réalisez ici la modification du titre avec l'ID du film
+}
+%>
 
 <h2>Exercice 4 : La valeur maximum</h2>
 <p>Créer un formulaire pour saisir un nouveau film dans la base de données</p>
+<form action="#" method="post">
+    <p>Titre du film : <input type="text" name="titre"></p>
+    <p>Année du film : <input type="text" name="annee"></p>
+    <p><input type="submit" value="Ajouter"></p>
+</form>
+
+<%
+String titreParam = request.getParameter("titre");
+String anneeParam = request.getParameter("annee");
+
+if (titreParam != null && anneeParam != null && !titreParam.isEmpty() && !anneeParam.isEmpty()) {
+    // Réalisez ici l'ajout du nouveau film avec titre et année
+}
+%>
 
 </body>
 </html>
