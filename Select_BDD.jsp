@@ -89,9 +89,28 @@ String titreParam = request.getParameter("titre");
 String anneeParam = request.getParameter("annee");
 
 if (titreParam != null && anneeParam != null && !titreParam.isEmpty() && !anneeParam.isEmpty()) {
-    // Réalisez ici l'ajout du nouveau film avec titre et année
+    try {
+        String url = "jdbc:mariadb://localhost:3306/films";
+        String user = "mysql";
+        String password = "mysql";
+
+        // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
+        Class.forName("org.mariadb.jdbc.Driver");
+
+        // Établir la connexion
+        Connection conn = DriverManager.getConnection(url, user, password);
+
+        // Exemple de requête SQL pour l'ajout du nouveau film
+        String sql = "INSERT INTO Film (titre, année) VALUES (?, ?)";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, titreParam);
+            pstmt.setInt(2, Integer.parseInt(anneeParam));
+            pstmt.executeUpdate();
+        }
+    } catch (Exception e) {
+        // Handle exceptions, e.g., SQLException or ClassNotFound
+    }
 }
 %>
-
 </body>
 </html>
