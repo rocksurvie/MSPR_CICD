@@ -95,8 +95,6 @@ if (titreParam != null && anneeParam != null && !titreParam.isEmpty() && !anneeP
          password = "mysql";
 
         // Établir la connexion
-        Connection conn = DriverManager.getConnection(url, user, password);
-
         // Exemple de requête SQL pour l'ajout du nouveau film
         String sql = "INSERT INTO Film (titre, année) VALUES (?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
