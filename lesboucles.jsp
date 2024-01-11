@@ -31,6 +31,16 @@
 <p>
     <% int row = 1; %>
     <% while (row <= cpt) { %>
+        <% for (int i = 1; i <= cpt; i++) { %>
+            <%= "*" %>
+        <% } %><br>
+        <% row++; %>
+    <% } %>
+
+
+
+    <% int row = 1; %>
+    <% while (row <= cpt) { %>
         <% int col = 1; %>
         <% while (col <= cpt) { %>
             <%= "*" %>
