@@ -156,8 +156,6 @@
 </p>
 
 
-
-<% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
