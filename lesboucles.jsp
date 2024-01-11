@@ -113,7 +113,7 @@
     <% row = 1; %>
     <% while (row <= cpt) { %>
         <% int space = cpt - row; %>
-        <% col = 1; %>
+        <% int col = 1; %>
     
         <% while (space > 0) { %>
             <%= "&nbsp;" %>
