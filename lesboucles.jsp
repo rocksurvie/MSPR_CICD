@@ -88,7 +88,7 @@
     <% row = 1; %>
     <% while (row <= cpt) { %>
         <% int space = cpt - row; %>
-        <% int col = 1; %>
+        <% col = 1; %>
     
         <% while (space > 0) { %>
             <%= "&nbsp;" %>
@@ -109,7 +109,25 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
 <p>retour Reel</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
+<p>
+    <% row = 1; %>
+    <% while (row <= cpt) { %>
+        <% space = cpt - row; %>
+        <% col = 1; %>
+    
+        <% while (space > 0) { %>
+            <%= "&nbsp;" %>
+            <% space--; %>
+        <% } %>
+    
+        <% while (col <= row) { %>
+            <%= "*" %>
+            <% col++; %>
+        <% } %><br>
+    
+        <% row++; %>
+    <% } %>
+</p>
 
 
 <h2>Exercice 6 : Le demi losange</h2>
