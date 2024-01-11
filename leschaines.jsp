@@ -43,7 +43,7 @@
            }
        }
     %>
-    Le nombre de 'e' dans la chaîne "<%= chaine %>" est : <%= countE %>
+    Le nombre de 'e' dans la chaîne "<%= chaine %>" est : <%= count %>
 </p>
 
 
