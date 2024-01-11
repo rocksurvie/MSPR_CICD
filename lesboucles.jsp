@@ -85,7 +85,7 @@
 <p>retour Reel</p>
 
 <p>    
-    <% int row = 1; %>
+    <% row = 1; %>
     <% while (row <= cpt) { %>
         <% int space = cpt - row; %>
         <% int col = 1; %>
