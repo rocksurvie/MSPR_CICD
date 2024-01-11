@@ -112,7 +112,7 @@
 <p>
     <% row = 1; %>
     <% while (row <= cpt) { %>
-        <% space = cpt - row; %>
+        <% int space = cpt - row; %>
         <% col = 1; %>
     
         <% while (space > 0) { %>
@@ -144,6 +144,18 @@
 <p>5 x 3 = 15</p>
 <p>5 x 4 = 20</p>
 <p>5 x 5 = 25</p>
+
+<p>5 x 4 = 20</p>
+<p>
+    <% int multiplicateur = 5; %>
+    <% int i = 1; %>
+    <% while (i <= cpt) { %>
+        <%= multiplicateur %> x <%= i %> = <%= multiplicateur * i %><br>
+        <% i++; %>
+    <% } %>
+</p>
+
+
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
