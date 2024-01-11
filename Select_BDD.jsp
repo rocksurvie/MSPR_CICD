@@ -7,13 +7,6 @@
     <title>Connexion à MariaDB via JSP</title>
 </head>
 <body>
-    <form action="#" method="post">
-    <p>Saisir une chaine (Du texte avec 6 caractères minimum) : <input type="text" name="chaine">
-    <p><input type="submit" value="Afficher">
-</form>
-<%-- Récupération de la valeur saisie --%>
-<% String chaine = request.getParameter("chaine"); %>
-
     <h1>Exemple de connexion à MariaDB avec JSP</h1>
 
 
