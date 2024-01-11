@@ -13,9 +13,8 @@
     String user = "mysql";
     String password = "mysql";
 
-        // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
-        Class.forName("org.mariadb.jdbc.Driver");
-        Connection connection = DriverManager.getConnection(url, user, password);
+    // Charger le pilote JDBC (pilote disponible dans WEB-INF/lib)
+    Class.forName("org.mariadb.jdbc.Driver");
 
         // Établir la connexion
         Connection conn = DriverManager.getConnection(url, user, password);
