@@ -28,10 +28,12 @@
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
+<p>retour Reel</p>
+
 <p>
     <% int row = 1; %>
     <% while (row <= cpt) { %>
-        <% for (int i = row; i <= cpt; i++) { %>
+        <% for (int i = 1; i <= cpt; i++) { %>
             <%= "*" %>
         <% } %><br>
         <% row++; %>
@@ -42,6 +44,8 @@
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
+<p>retour Reel</p>
+
 <p>
     <% row = 1; %>
     <% while (row <= cpt) { %>
@@ -59,6 +63,9 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*****</br>****</br>***</br>**</br>*</p>
+
+<p>retour Reel</p>
+
 <p>
     <% row = cpt; %>
     <% while (row >= 1) { %>
@@ -75,11 +82,35 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
+<p>retour Reel</p>
+
+<p>    
+    <% int row = 1; %>
+    <% while (row <= cpt) { %>
+        <% int space = cpt - row; %>
+        <% int col = 1; %>
+    
+        <% while (space > 0) { %>
+            <%= "&nbsp;" %>
+            <% space--; %>
+        <% } %>
+    
+        <% while (col <= row) { %>
+            <%= "*" %>
+            <% col++; %>
+        <% } %><br>
+    
+        <% row++; %>
+    <% } %>
+</p>
 
 <h2>Exercice 5 : Triangle isocele</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
+<p>retour Reel</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
+
 
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
