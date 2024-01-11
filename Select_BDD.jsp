@@ -86,7 +86,7 @@ if (idFilmParam != null && nouveauTitreParam != null && !idFilmParam.isEmpty() &
 
 <%
 String titreParam = request.getParameter("titre");
-String anneeParam = request.getParameter("annee");
+ anneeParam = request.getParameter("annee");
 
 if (titreParam != null && anneeParam != null && !titreParam.isEmpty() && !anneeParam.isEmpty()) {
     try {
