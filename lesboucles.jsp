@@ -29,22 +29,15 @@
 <p>Ecrire le code afin de produire un carré d'étoile</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>
-    <% for (int i = 1; i <= cpt; i++) { %>
-        <%= "*" %>
-    <% } %><br>
-    <% for (int i = 2; i <= cpt; i++) { %>
-        <%= "*" %>
-    <% } %><br>
-    <% for (int i = 3; i <= cpt; i++) { %>
-        <%= "*" %>
-    <% } %><br>
-    <% for (int i = 4; i <= cpt; i++) { %>
-        <%= "*" %>
-    <% } %><br>
-    <% for (int i = 5; i <= cpt; i++) { %>
-        <%= "*" %>
+    <% int row = 1; %>
+    <% while (row <= cpt) { %>
+        <% int col = 1; %>
+        <% while (col <= cpt) { %>
+            <%= "*" %>
+            <% col++; %>
+        <% } %><br>
+        <% row++; %>
     <% } %>
-    
 </p>
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
