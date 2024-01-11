@@ -65,8 +65,22 @@ xueivulp ares revih'l</p>
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
+<%
+int countConsonnes = 0;
+int countVoyelles = 0;
+String voyelles = "aeiouyAEIOUY";
 
-<% } %>
+for (int i = 0; i < chaine.length(); i++) {
+    char currentChar = chaine.charAt(i);
+    if (Character.isLetter(currentChar)) {
+        if (voyelles.indexOf(currentChar) != -1) {
+            countVoyelles++;
+        } else {
+            countConsonnes++;
+        }
+    }
+}
+%>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
