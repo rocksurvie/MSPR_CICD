@@ -37,17 +37,6 @@
         <% row++; %>
     <% } %>
 
-
-
-    <% int row = 1; %>
-    <% while (row <= cpt) { %>
-        <% int col = 1; %>
-        <% while (col <= cpt) { %>
-            <%= "*" %>
-            <% col++; %>
-        <% } %><br>
-        <% row++; %>
-    <% } %>
 </p>
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
