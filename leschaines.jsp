@@ -35,6 +35,20 @@
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
+<% if (chaine != null && !chaine.isEmpty()) { %>
+    <%-- Utilisation de la classe Pattern pour compter les occurrences --%>
+    <% Pattern pattern = Pattern.compile("e", Pattern.CASE_INSENSITIVE); %>
+    <% Matcher matcher = pattern.matcher(chaine); %>
+
+    <%-- Comptage des occurrences --%>
+    <% int count = 0; %>
+    <% while (matcher.find()) { %>
+        <% count++; %>
+    <% } %>
+
+    <p>Le nombre de 'e' dans la chaîne "<%= chaine %>" est : <%= count %></p>
+<% } %>
+
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
 Exemple : Bonjour</br>
