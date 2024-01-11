@@ -38,7 +38,7 @@
     Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères.
     <% int count = 0;
        for (int i = 0; i < chaine.length(); i++) {
-           if (Character.charAt(i) == 'e') {
+           if (chaine.charAt(i) == 'e') {
                count++;
            }
        }
