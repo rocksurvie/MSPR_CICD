@@ -38,6 +38,22 @@ A = 10</br>
 B = 20</br>
 C = 15</br>
 Oui C est compris entre A et B</p>
+<p> Result</p>
+<%
+    int A = 10;
+    int B = 20;
+    int C = 15;
+
+    if (A <= C && C <= B) {
+%>
+    Oui C est compris entre A et B
+<%
+    } else {
+%>
+    Non C n'est pas compris entre A et B
+<%
+    }
+%>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
