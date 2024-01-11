@@ -36,10 +36,10 @@
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 <p>
     Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères.
-    <% int countE = 0;
+    <% int count = 0;
        for (int i = 0; i < chaine.length(); i++) {
-           if (Character.toLowerCase(chaine.charAt(i)) == 'e') {
-               countE++;
+           if (Character.charAt(i) == 'e') {
+               count++;
            }
        }
     %>
